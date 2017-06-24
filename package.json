@@ -1,0 +1,19 @@
+{
+  "name": "find_my_train",
+  "version": "1.0.0",
+  "description": "find an open seat on Bart from Embarcadero Station",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkbelow/find_my_train.git"
+  },
+  "author": "Nicholas Below",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkbelow/find_my_train/issues"
+  },
+  "homepage": "https://github.com/nkbelow/find_my_train#readme"
+}
