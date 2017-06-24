@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nkbelow/find_my_train/issues"
   },
-  "homepage": "https://github.com/nkbelow/find_my_train#readme"
+  "homepage": "https://github.com/nkbelow/find_my_train#readme",
+  "dependencies": {
+    "firebase": "^4.1.3"
+  }
 }
