@@ -1,0 +1,20 @@
+{
+  "name": "find_my_train",
+  "scripts": {
+  },
+  "env": {
+    "NODE_MODULES": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
