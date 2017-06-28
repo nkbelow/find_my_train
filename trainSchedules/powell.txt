@@ -9,53 +9,19 @@
             "#cdata-section": "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=powl&json=y"
         },
         "date": "06/27/2017",
-        "time": "06:04:46 PM PDT",
+        "time": "08:56:46 PM PDT",
         "station": [
             {
                 "name": "Powell St.",
                 "abbr": "POWL",
                 "etd": [
                     {
-                        "destination": "24th Street - Limited",
-                        "abbreviation": "24TH",
-                        "limited": "1",
-                        "estimate": [
-                            {
-                                "minutes": "7",
-                                "platform": "1",
-                                "direction": "South",
-                                "length": "9",
-                                "color": "YELLOW",
-                                "hexcolor": "#ffff33",
-                                "bikeflag": "1"
-                            },
-                            {
-                                "minutes": "27",
-                                "platform": "1",
-                                "direction": "South",
-                                "length": "8",
-                                "color": "YELLOW",
-                                "hexcolor": "#ffff33",
-                                "bikeflag": "1"
-                            }
-                        ]
-                    },
-                    {
                         "destination": "Daly City",
                         "abbreviation": "DALY",
                         "limited": "0",
                         "estimate": [
                             {
-                                "minutes": "2",
-                                "platform": "1",
-                                "direction": "South",
-                                "length": "10",
-                                "color": "GREEN",
-                                "hexcolor": "#339933",
-                                "bikeflag": "1"
-                            },
-                            {
-                                "minutes": "13",
+                                "minutes": "14",
                                 "platform": "1",
                                 "direction": "South",
                                 "length": "9",
@@ -64,12 +30,21 @@
                                 "bikeflag": "1"
                             },
                             {
-                                "minutes": "16",
+                                "minutes": "35",
                                 "platform": "1",
                                 "direction": "South",
-                                "length": "10",
-                                "color": "GREEN",
-                                "hexcolor": "#339933",
+                                "length": "8",
+                                "color": "BLUE",
+                                "hexcolor": "#0099cc",
+                                "bikeflag": "1"
+                            },
+                            {
+                                "minutes": "54",
+                                "platform": "1",
+                                "direction": "South",
+                                "length": "9",
+                                "color": "BLUE",
+                                "hexcolor": "#0099cc",
                                 "bikeflag": "1"
                             }
                         ]
@@ -80,16 +55,7 @@
                         "limited": "0",
                         "estimate": [
                             {
-                                "minutes": "9",
-                                "platform": "2",
-                                "direction": "North",
-                                "length": "8",
-                                "color": "BLUE",
-                                "hexcolor": "#0099cc",
-                                "bikeflag": "1"
-                            },
-                            {
-                                "minutes": "18",
+                                "minutes": "8",
                                 "platform": "2",
                                 "direction": "North",
                                 "length": "9",
@@ -98,46 +64,21 @@
                                 "bikeflag": "1"
                             },
                             {
-                                "minutes": "32",
+                                "minutes": "28",
                                 "platform": "2",
                                 "direction": "North",
                                 "length": "9",
                                 "color": "BLUE",
                                 "hexcolor": "#0099cc",
                                 "bikeflag": "1"
-                            }
-                        ]
-                    },
-                    {
-                        "destination": "Millbrae",
-                        "abbreviation": "MLBR",
-                        "limited": "0",
-                        "estimate": [
-                            {
-                                "minutes": "5",
-                                "platform": "1",
-                                "direction": "South",
-                                "length": "8",
-                                "color": "RED",
-                                "hexcolor": "#ff0000",
-                                "bikeflag": "1"
                             },
                             {
-                                "minutes": "18",
-                                "platform": "1",
-                                "direction": "South",
-                                "length": "10",
-                                "color": "RED",
-                                "hexcolor": "#ff0000",
-                                "bikeflag": "1"
-                            },
-                            {
-                                "minutes": "32",
-                                "platform": "1",
-                                "direction": "South",
+                                "minutes": "48",
+                                "platform": "2",
+                                "direction": "North",
                                 "length": "9",
-                                "color": "RED",
-                                "hexcolor": "#ff0000",
+                                "color": "BLUE",
+                                "hexcolor": "#0099cc",
                                 "bikeflag": "1"
                             }
                         ]
@@ -148,16 +89,7 @@
                         "limited": "0",
                         "estimate": [
                             {
-                                "minutes": "2",
-                                "platform": "2",
-                                "direction": "North",
-                                "length": "8",
-                                "color": "YELLOW",
-                                "hexcolor": "#ffff33",
-                                "bikeflag": "1"
-                            },
-                            {
-                                "minutes": "5",
+                                "minutes": "3",
                                 "platform": "2",
                                 "direction": "North",
                                 "length": "10",
@@ -166,10 +98,19 @@
                                 "bikeflag": "1"
                             },
                             {
-                                "minutes": "20",
+                                "minutes": "21",
                                 "platform": "2",
                                 "direction": "North",
-                                "length": "9",
+                                "length": "8",
+                                "color": "YELLOW",
+                                "hexcolor": "#ffff33",
+                                "bikeflag": "1"
+                            },
+                            {
+                                "minutes": "41",
+                                "platform": "2",
+                                "direction": "North",
+                                "length": "10",
                                 "color": "YELLOW",
                                 "hexcolor": "#ffff33",
                                 "bikeflag": "1"
@@ -182,7 +123,7 @@
                         "limited": "0",
                         "estimate": [
                             {
-                                "minutes": "13",
+                                "minutes": "15",
                                 "platform": "2",
                                 "direction": "North",
                                 "length": "9",
@@ -191,19 +132,10 @@
                                 "bikeflag": "1"
                             },
                             {
-                                "minutes": "27",
+                                "minutes": "35",
                                 "platform": "2",
                                 "direction": "North",
                                 "length": "9",
-                                "color": "RED",
-                                "hexcolor": "#ff0000",
-                                "bikeflag": "1"
-                            },
-                            {
-                                "minutes": "42",
-                                "platform": "2",
-                                "direction": "North",
-                                "length": "8",
                                 "color": "RED",
                                 "hexcolor": "#ff0000",
                                 "bikeflag": "1"
@@ -211,21 +143,12 @@
                         ]
                     },
                     {
-                        "destination": "SF Airport",
-                        "abbreviation": "SFIA",
+                        "destination": "SFO/Millbrae",
+                        "abbreviation": "MLBR",
                         "limited": "0",
                         "estimate": [
                             {
-                                "minutes": "12",
-                                "platform": "1",
-                                "direction": "South",
-                                "length": "10",
-                                "color": "YELLOW",
-                                "hexcolor": "#ffff33",
-                                "bikeflag": "1"
-                            },
-                            {
-                                "minutes": "24",
+                                "minutes": "19",
                                 "platform": "1",
                                 "direction": "South",
                                 "length": "10",
@@ -241,55 +164,14 @@
                                 "color": "YELLOW",
                                 "hexcolor": "#ffff33",
                                 "bikeflag": "1"
-                            }
-                        ]
-                    },
-                    {
-                        "destination": "SFO/Millbrae",
-                        "abbreviation": "MLBR",
-                        "limited": "0",
-                        "estimate": [
+                            },
                             {
-                                "minutes": "54",
+                                "minutes": "61",
                                 "platform": "1",
                                 "direction": "South",
                                 "length": "10",
                                 "color": "YELLOW",
                                 "hexcolor": "#ffff33",
-                                "bikeflag": "1"
-                            }
-                        ]
-                    },
-                    {
-                        "destination": "Warm Springs",
-                        "abbreviation": "WARM",
-                        "limited": "0",
-                        "estimate": [
-                            {
-                                "minutes": "8",
-                                "platform": "2",
-                                "direction": "North",
-                                "length": "10",
-                                "color": "GREEN",
-                                "hexcolor": "#339933",
-                                "bikeflag": "1"
-                            },
-                            {
-                                "minutes": "15",
-                                "platform": "2",
-                                "direction": "North",
-                                "length": "10",
-                                "color": "GREEN",
-                                "hexcolor": "#339933",
-                                "bikeflag": "1"
-                            },
-                            {
-                                "minutes": "31",
-                                "platform": "2",
-                                "direction": "North",
-                                "length": "10",
-                                "color": "GREEN",
-                                "hexcolor": "#339933",
                                 "bikeflag": "1"
                             }
                         ]
