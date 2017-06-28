@@ -7,6 +7,31 @@
 
 }
 
+h3 {
+  font-size: 1.17em;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+td {
+  text-align: center;
+}
+
+.options {
+  width: 100%;
+}
+
+.options tbody tr {
+  width: 100%;
+  border: 5px solid red;
+}
+
+.options tbody tr td {
+  width: 33.333%;
+}
+
 
 .table-title {
   text-align: center;
@@ -21,13 +46,6 @@
   and (max-device-width: 568px) {
 
   body {
-    background-color: green;
-  }
-  table {
-    width: 50%;
-  }
-  td {
-    padding: 0px;
-    font-size: 80%;
+    font-size: 10px;
   }
 }
