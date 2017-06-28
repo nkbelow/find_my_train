@@ -1,0 +1,13 @@
+#next-departures-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+.table-title {
+  text-align: center;
+}
+
+.southbound-trains {
+  width: 100%;
+} 
