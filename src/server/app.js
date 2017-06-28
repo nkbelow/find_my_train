@@ -6,7 +6,7 @@ const path = require('path');
 const dotenv = require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const departureTrains = ['Richmond', 'Pittsburg/Bay Point', 'Daly City', 'SF Airport', 'Millbrae'];
 const departures = {
