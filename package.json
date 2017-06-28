@@ -19,7 +19,6 @@
   "homepage": "https://github.com/nkbelow/find_my_train#readme",
   "dependencies": {
     "express": "^4.15.3",
-    "firebase": "^4.1.3",
     "node-cron": "^1.2.0",
     "node-fetch": "^1.7.1"
   },
