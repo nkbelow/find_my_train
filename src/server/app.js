@@ -52,8 +52,6 @@ const nextDestinationDeparture = (data, destinations, departures) => {
     let train = trains[i];
     if (destinations.includes(train.destination)) {
       departures[station][train.destination] = train['estimate'][0].minutes !== 'Leaving' ? +train['estimate'][0].minutes : 0;
-    } else {
-      departures[station][train.destination] = `train ${departures[station][train.destination]} is no longer operating`;
     }
   }     
 };
