@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="stylesheet" type='text/css' href="styles.css">
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type='text/css' href="styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Find Me A Seat On Bart</title>
   </head>
   <body>
     <div id='next-departures-wrapper'>
+    
     <table id='nextDepartures'>
       <thead>
         <tr>
           <th colspan='6' class='table-title'>Next Departures</th>
         </tr>
         <tr>
-          <th></th>
+          <th><input type=button value='Get Updated Times' onClick='window.location.reload(true)' ></th>
           <th>Richmond</th>
           <th>Pittsburg/Bay Point</th>
           <th>Daly City</th>
