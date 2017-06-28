@@ -1,5 +1,5 @@
 const express = require('express');
-// const cron = require('node-cron');
+const cron = require('node-cron');
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
@@ -88,52 +88,52 @@ const getBartData = (request, response) => {
 };
 
 
-// var task = cron.schedule('*/1 * * * *', function() {
-//   const embr = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=embr&key=MW9S-E7SL-26DU-VV8V&json=y';
-//   const mont = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=mont&key=MW9S-E7SL-26DU-VV8V&json=y';
-//   const powell = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=powl&key=MW9S-E7SL-26DU-VV8V&json=y';
-//   const civic = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=civc&key=MW9S-E7SL-26DU-VV8V&json=y';
-//   fetch(embr)
-//     .then(res => res.json())
-//     .then(data => {
-//       fs.writeFile(__dirname + '/../../trainSchedules/embr.txt', JSON.stringify(data, null, 4), function() {
-//         console.log('Embarcadero')
-//       })
-//       nextDestinationDeparture(data, departureTrains, departures)
-//     })
-//     .catch(err => console.log(err));
-//   fetch(mont)
-//     .then(res => res.json())
-//     .then(data => {
-//       fs.writeFile(__dirname + '/../../trainSchedules/mont.txt', JSON.stringify(data, null, 4), function() {
-//         console.log('data was received');
-//       })
-//       nextDestinationDeparture(data, departureTrains, departures)
-//     })
-//     .catch(err => console.log(err));
-//   fetch(powell)
-//     .then(res => res.json())
-//     .then(data => {
-//       fs.writeFile(__dirname + '/../../trainSchedules/powell.txt', JSON.stringify(data, null, 4), function() {
-//         nextDestinationDeparture(data, departureTrains, departures)
-//         console.log('data was received');
-//       });
-//     })
-//     .catch(err => console.log(err));
-//   fetch(civic)
-//     .then(res => res.json())
-//     .then(data => {
-//       fs.writeFile(__dirname + '/../../trainSchedules/civic.txt', JSON.stringify(data, null, 4), function() {
-//         console.log('data was received');
-//       });
-//       nextDestinationDeparture(data, departureTrains, departures);
-//     })
-//     .catch(err => console.log(err));
-//   console.log('running a task every minute', new Date());
-//   console.log(departures['Embarcadero'], 'this is Embarcadero');
-// }, true);
+var task = cron.schedule('*/1 * * * *', function() {
+  const embr = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=embr&key=MW9S-E7SL-26DU-VV8V&json=y';
+  const mont = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=mont&key=MW9S-E7SL-26DU-VV8V&json=y';
+  const powell = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=powl&key=MW9S-E7SL-26DU-VV8V&json=y';
+  const civic = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=civc&key=MW9S-E7SL-26DU-VV8V&json=y';
+  fetch(embr)
+    .then(res => res.json())
+    .then(data => {
+      fs.writeFile(__dirname + '/../../trainSchedules/embr.txt', JSON.stringify(data, null, 4), function() {
+        console.log('Embarcadero')
+      })
+      nextDestinationDeparture(data, departureTrains, departures)
+    })
+    .catch(err => console.log(err));
+  fetch(mont)
+    .then(res => res.json())
+    .then(data => {
+      fs.writeFile(__dirname + '/../../trainSchedules/mont.txt', JSON.stringify(data, null, 4), function() {
+        console.log('data was received');
+      })
+      nextDestinationDeparture(data, departureTrains, departures)
+    })
+    .catch(err => console.log(err));
+  fetch(powell)
+    .then(res => res.json())
+    .then(data => {
+      fs.writeFile(__dirname + '/../../trainSchedules/powell.txt', JSON.stringify(data, null, 4), function() {
+        nextDestinationDeparture(data, departureTrains, departures)
+        console.log('data was received');
+      });
+    })
+    .catch(err => console.log(err));
+  fetch(civic)
+    .then(res => res.json())
+    .then(data => {
+      fs.writeFile(__dirname + '/../../trainSchedules/civic.txt', JSON.stringify(data, null, 4), function() {
+        console.log('data was received');
+      });
+      nextDestinationDeparture(data, departureTrains, departures);
+    })
+    .catch(err => console.log(err));
+  console.log('running a task every minute', new Date());
+  console.log(departures['Embarcadero'], 'this is Embarcadero');
+}, true);
 
-// task.start();
+task.start();
 
 app.use('/', express.static(path.join(__dirname, '../../public')));
 
