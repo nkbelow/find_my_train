@@ -1,6 +1,9 @@
+
 #next-departures-wrapper {
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
+
 }
 
 

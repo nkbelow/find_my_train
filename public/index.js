@@ -27,11 +27,10 @@ const populateDepartureTable = (data) => {
 
 const populateOptionsColumns = (options, tableId, childNum) => {
   const tableBody = document.querySelector(`#${tableId} tbody`);
-  const tableData = tableBody.querySelectorAll(`tr td:nth-child(${childNum}`);
-  console.log(tableData, 'this is the table data');
-  console.log(options, 'these are the options')
+  const tableRows = tableBody.querySelectorAll(`tr`);
+
   for (var i = 0; i < options.length; i++) {
-    tableData[i].innerHTML = options[i];
+    tableRows[i].children[childNum].innerHTML = options[i];
   }
 };
 
@@ -57,6 +56,7 @@ const calculateRouteOptions = (data, northBoundTrain, southBoundTrain) => {
       }
     }
   }
+  console.log(options)
   return options;
 };
 
@@ -66,12 +66,12 @@ const getBartData = () => {
     .then(data => {
       console.log(data);
       populateDepartureTable(data);
-      populateOptionsColumns(calculateRouteOptions(data, 'Richmond', 'Daly City'), 'richmond-options', 1);
-      populateOptionsColumns(calculateRouteOptions(data, 'Richmond', 'SF Airport'), 'richmond-options', 2);
-      populateOptionsColumns(calculateRouteOptions(data, 'Richmond', 'Millbrae'), 'richmond-options', 3);
-      populateOptionsColumns(calculateRouteOptions(data, 'Pittsburg/Bay Point', 'Daly City'), 'pittsburg_baypoint-options', 1);
-      populateOptionsColumns(calculateRouteOptions(data, 'Pittsburg/Bay Point', 'SF Airport'), 'pittsburg_baypoint-options', 2);
-      populateOptionsColumns(calculateRouteOptions(data, 'Pittsburg/Bay Point', 'Millbrae'), 'pittsburg_baypoint-options', 3);
+      populateOptionsColumns(calculateRouteOptions(data, 'Richmond', 'Daly City'), 'richmond-options', 0);
+      populateOptionsColumns(calculateRouteOptions(data, 'Richmond', 'SF Airport'), 'richmond-options', 1);
+      populateOptionsColumns(calculateRouteOptions(data, 'Richmond', 'Millbrae'), 'richmond-options', 2);
+      populateOptionsColumns(calculateRouteOptions(data, 'Pittsburg/Bay Point', 'Daly City'), 'pittsburg_baypoint-options', 0);
+      populateOptionsColumns(calculateRouteOptions(data, 'Pittsburg/Bay Point', 'SF Airport'), 'pittsburg_baypoint-options', 1);
+      populateOptionsColumns(calculateRouteOptions(data, 'Pittsburg/Bay Point', 'Millbrae'), 'pittsburg_baypoint-options', 2);
 
     });
 };
