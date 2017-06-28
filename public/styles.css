@@ -7,6 +7,11 @@
 
 }
 
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
 h3 {
   font-size: 1.17em;
   width: 100%;
@@ -14,9 +19,16 @@ h3 {
 }
 
 
+.border {
+  border-bottom: 1px solid black;
+
+
+}
 
 td {
   text-align: center;
+   border-left: 1px solid black;
+
 }
 
 .options {
@@ -25,7 +37,6 @@ td {
 
 .options tbody tr {
   width: 100%;
-  border: 5px solid red;
 }
 
 .options tbody tr td {

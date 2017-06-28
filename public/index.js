@@ -36,6 +36,9 @@ const populateOptionsColumns = (options, tableClass, childNum) => {
 
   for (var i = 0; i < options.length; i++) {
     tableRows[i].children[childNum].innerHTML = options[i];
+    if (options.length > 1 && i !== options.length - 1) {
+      tableRows[i].children[childNum].classList.add('border');
+    }
   }
 };
 
@@ -51,10 +54,10 @@ const calculateRouteOptions = (data, northBoundTrain, southBoundTrain) => {
       options.push(`Take ${southBoundTrain} to Montgomery St. Station. From there you will have approximately ${montgomery[northBoundTrain] - montgomery[southBoundTrain]}
        minutes to catch the ${northBoundTrain}`);
       if (powell[southBoundTrain] < powell[northBoundTrain] && powell[southBoundTrain] > embarcadero[southBoundTrain]) {
-        options.push(`Take ${southBoundTrain} to Powell St. Station. You have approximately ${powell[northBoundTrain] - powell[southBoundTrain]} minutes
+        options.push(`Take ${southBoundTrain} to Powell St. Station. From there you will have approximately ${powell[northBoundTrain] - powell[southBoundTrain]} minutes
           to catch the ${northBoundTrain} Train`);
         if (civicCenter[southBoundTrain] < civicCenter[northBoundTrain] && civicCenter[southBoundTrain] > powell[southBoundTrain]) {
-          options.push(`Take ${southBoundTrain} to Civic Center/UN Plaza Station. You have approximately ${civicCenter[northBoundTrain] - civicCenter[southBoundTrain]}
+          options.push(`Take ${southBoundTrain} to Civic Center/UN Plaza Station. From there you will have approximately ${civicCenter[northBoundTrain] - civicCenter[southBoundTrain]}
             minutes to catch the ${northBoundTrain} Train`);
         }
       }
