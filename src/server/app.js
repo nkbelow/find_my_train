@@ -3,14 +3,12 @@ const cron = require('node-cron');
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv').config();
 
 const app = express();
-
 const port = 3000;
 
 const departureTrains = ['Richmond', 'Pittsburg/Bay Point', 'Daly City', 'SF Airport', 'Millbrae'];
-
-
 const departures = {
   'Embarcadero': {
     'Richmond': null,
@@ -54,15 +52,17 @@ const nextDestinationDeparture = (data, destinations, departures) => {
     let train = trains[i];
     if (destinations.includes(train.destination)) {
       departures[station][train.destination] = train['estimate'][0].minutes !== 'Leaving' ? +train['estimate'][0].minutes : 0;
+    } else {
+      departures[station][train.destination] = `train ${departures[station][train.destination]} is no longer operating`;
     }
   }     
 };
 
-const getBartData = (req, res) => {
-  const embr = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=embr&key=MW9S-E7SL-26DU-VV8V&json=y';
-  const mont = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=mont&key=MW9S-E7SL-26DU-VV8V&json=y';
-  const powell = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=powl&key=MW9S-E7SL-26DU-VV8V&json=y';
-  const civic = 'http://api.bart.gov/api/etd.aspx?cmd=etd&orig=civc&key=MW9S-E7SL-26DU-VV8V&json=y';
+const getBartData = (request, response) => {
+  const embr = `http://api.bart.gov/api/etd.aspx?cmd=etd&orig=embr&key=${process.env.API_KEY}&json=y`;
+  const mont = `http://api.bart.gov/api/etd.aspx?cmd=etd&orig=mont&key=${process.env.API_KEY}&json=y`;
+  const powell = `http://api.bart.gov/api/etd.aspx?cmd=etd&orig=powl&key=${process.env.API_KEY}&json=y`;
+  const civic = `http://api.bart.gov/api/etd.aspx?cmd=etd&orig=civc&key=${process.env.API_KEY}&json=y`;
   fetch(embr)
     .then(res => res.json())
     .then(data => {
@@ -72,16 +72,17 @@ const getBartData = (req, res) => {
     .then(res => res.json())
     .then(data => {
       nextDestinationDeparture(data, departureTrains, departures);
-      return fetch(powell)
+      return fetch(powell);
     })
     .then(res => res.json())
     .then(data => {
+      nextDestinationDeparture(data, departureTrains, departures);
       return fetch(civic);
     })
     .then(res => res.json())
     .then(data => {
       nextDestinationDeparture(data, departureTrains, departures);
-      res.json(departures);
+      response.json(departures);
     })
     .catch(err => console.log(err));
 };
