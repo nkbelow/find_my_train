@@ -1,4 +1,17 @@
 
+if((Browser.Platform.ios) || (Browser.Platform.webos) || (Browser.Platform.android)) {
+  //For iPhone and Andriod To remove Address bar when viewing website on Safari Mobile
+  // When ready...
+  window.addEventListener("load",function() {
+    // Set a timeout...
+    setTimeout(function(){
+    // Hide the address bar!
+    window.scrollTo(0, 1);
+    }, 0);
+  });
+}
+
+
 const embarcaderoRows = document.querySelectorAll('#embarcadero-times td');
 const montegomeryRows = document.querySelectorAll('#montgomery-times td');
 const powellRows = document.querySelectorAll('#powell-times td');
