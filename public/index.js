@@ -28,7 +28,6 @@ const populateDepartureTable = (data) => {
 const populateOptionsColumns = (options, tableId, childNum) => {
   const tableBody = document.querySelector(`#${tableId} tbody`);
   const tableRows = tableBody.querySelectorAll(`tr`);
-
   for (var i = 0; i < options.length; i++) {
     tableRows[i].children[childNum].innerHTML = options[i];
   }
@@ -56,7 +55,6 @@ const calculateRouteOptions = (data, northBoundTrain, southBoundTrain) => {
       }
     }
   }
-  console.log(options)
   return options;
 };
 
